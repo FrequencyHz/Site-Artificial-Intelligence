@@ -240,15 +240,12 @@ h1{
     color: black;
     font-weight: 900;
 }
-<<<<<<< HEAD
+
 li{
     color: rgb(243, 151, 14);
 }
 /*resposibilidade 430px*/
-=======
 
-/*resposibilidade 400px*/
->>>>>>> e308a15e24dc7b162cab19a50e1de3b06cf7831f
 @media only screen and (max-width:430px){
     
     .up{
