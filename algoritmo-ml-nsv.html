@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--icones-->
+     <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png" />
+     <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png" />
+     <link rel="manifest" href="/site.webmanifest" />
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+     <!--ligações-->
+     <link rel="stylesheet" type="text/css" href="algoritmo-ml-nsv.css">
+     <!--fontes-->
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+     
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+     
+     <link rel='icon' type='image/png' href="face.png">
+    <title>Algoritmos de Machine Learning</title>
+</head>
+<body>
+     <!--menu-->
+     <nav id="nav">
+        <div class="container">
+                
+            <div class="logo">Artificial Intelligence</div>
+            <label for="drop" class="toggle btn-menu">Menu</label>
+            <input type="checkbox" id="drop">
+            
+            <ul class="menu"> 
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <label for="drop-1" class="toggle">Sobre +</label>
+                    <a href="#">Sobre</a>
+                    <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="o_que_e_IA.html">O que é?</a></li>
+                        <li><a href="exemplos.html">Aplicações de IA</a></li>
+                        <li><a href="historiaAI.html">Dados Históricos</a></li>
+            
+                    </ul>
+                </li>
+                <li>
+                    <label for="drop-2" class="toggle">Machine Learning +</label>
+                    <a href="#">Machine Learning</a>
+                    <input type="checkbox" id="drop-2">
+                    <ul>
+                        <li><a href="machinelearning.html">Machine Learning</a></li>
+                        <li><a href="quem-usando.html">Quem está usando?</a></li>
+                        <li><a href="mpopulares.html">métodos mais populares</a></li>
+                        <li><a href="diferença.html">Diferença</a></li>
+                    </ul> 
+                </li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="login.html">Login</a></li>
+        </div>
+    </nav>
+
+
+    
+    <div class="up">
+        <h1>Aprendizado Não-Supervisionado</h1>
+    </div>
+    <div class="linha-horizontal"></div>
+
+    <div class="main">
+        <div class="side_l">
+        </div>
+        <div class="center">
+            <!--clusterização-->
+            <p class="_bold">Algoritmos de Machine Learning</p>
+            <p class="subtitle">K-means</p>
+            <p class="pcenter">Um dos algoritmos de Clusterização mais conhecido e utilizado é o K-means, um algoritmo baseado em distâncias. Este algoritmo exige que seja informado previamente o parâmetro k (número de clusters ou grupos) e atribui cada observação a um dos k clusters. A figura a seguir ilustra os resultados deste algoritmo em uma mesma base de dados, considerando 3 diferentes valores de k:</p>
+            <div class="imgs">
+                <img src="algoritmo K-means.png">
+            </div>
+            <p class="pcenter">O algoritmo K-means considera que os registros do conjunto de dados correspondem a pontos no Rn, em que cada atributo corresponde a uma dimensão e k determina a quantidade de grupos a serem identificados. Seu funcionamento pode ser resumido nas seguintes etapas:</p>
+            <ul>
+                <li><p class="pcenter">Seleciona aleatoriamente k pontos do conjunto de dados (sementes), que são os representantes iniciais (centróides), dos k grupos a serem formados.</p></li>
+                <li><p class="pcenter">Para cada ponto, o algoritmo calcula a distância deste ponto a cada um dos centróides e atribui este ponto ao grupo cuja distância do centróide seja a menor. O resultado desse passo inicial é que cada ponto do conjunto de dados fica associado a um dos k grupos.</p></li>
+                <li><p class="pcenter">Após a alocação inicial, o método segue iterativamente, atualizando os centróides de cada grupo e da realocando os pontos a grupos, de acordo com o centróide mais próximo. O novo centróide de cada grupo G é calculado pela média dos pontos alocados a G.</p></li>
+                <li><p class="pcenter">O processo iterativo termina quando os centróides dos grupos param de se modificar, ou após um número preestabelecido de iterações ter sido realizado.</p></li>
+            </ul>
+            <p class="pcenter">Inicialmente, as sementes são selecionadas aleatoriamente e cada exemplo é alocado ao grupo com menor distância do centróide. Os centróides são então atualizados e ocorre nova realocação de pontos. Este processo continua iterativamente até a convergência.</p>
+            <p class="pcenter">Em geral, o K-means apresenta bom desempenho quando os grupos são densos, compactos e bem separados uns dos outros, além de ser computacionalmente rápido e de fácil entendimento e implementação Entretanto, há a necessidade de especificar previamente o parâmetro k, sendo necessário realizar experimentos para determinar o valor adequado. Além disso, este algoritmo não é adequado para descobrir grupos com formas não convexas, de tamanhos muito diferentes ou com sobreposição. Seu desempenho é muito sensível à existência de ruídos no conjunto de dados, visto que mesmo um pequeno número de dados ruidosos pode influenciar significativamente os valores médios dos grupos.</p>
+            <p class="subtitle">Apriori</p>
+            <p class="pcenter">O algoritmo mais conhecido para problemas de Associação é o Apriori, proposto por em 1993. Este algoritmo está presente em diversos softwares comerciais e públicos, é de fácil uso e é amplamente utilizado. Diversos outros algoritmos para descoberta de associações foram inspirados no Apriori, como DHP, Partition, DIC, Eclat, MaxEclat, Clique, MaxClique, Cumulate e EstMerge.</p>
+            <p class="pcenter">A ideia básica do Apriori é extrair um conjunto de regras a partir da conjunção de itens mais frequentes na base de dados, até que alguns critérios de parada sejam atendidos, como tamanho máximo da regra, suporte mínimo da premissa e confiança mínima da regra.</p>
+            <p class="pcenter">Para ilustrar seu funcionamento, vamos utilizar o exemplo do capítulo 56: uma loja virtual na qual, dado um novo cliente, queremos saber qual produto oferecer via análise do histórico, considerando um grupo de clientes que observaram/adquiriram determinados produtos, ilustrados pela tabela a seguir:</p>
+            <div class="imgs">
+                <img class="especial"src="Histórico de compras de um grupo de clientes.png">
+            </div>
+            <p class="pcenter"><span class="passos">Passo 1:</span> defina os parâmetros usados como base para extração das regras de associação, por exemplo:</p>
+            <ul>
+                <li><p class="pcenter">Tamanho máximo da regra = 2</p></li>
+                <li><p class="pcenter">Suporte mínimo da premissa = 1/7</p></li>
+                <li><p class="pcenter">Confiança mínima da regra = 2/7</p></li>
+            </ul>
+            <p class="pcenter"><span class="passos">Passo 2:</span> gere as primeiras premissas e calcule as suas métricas de suporte:</p>
+            <p class="pcenter">Premissas:</p>
+            <ul>
+                <li><p class="pcenter">Prem1 = “Se Acesso é TV”</p></li>
+                <li><p class="pcenter">Prem2 = “Se Acesso é Tablet”</p></li>
+                <li><p class="pcenter">Prem3 = “Se Acesso é Smartphone”</p></li>
+            </ul>
+            <p class="pcenter">Suporte:</p>
+            <ul>
+                <li><p class="pcenter">Sup(Prem1) = 3/7</p></li>
+                <li><p class="pcenter">Sup(Prem2) = 5/7</p></li>
+                <li><p class="pcenter">Sup(Prem3) = 4/7</p></li>
+            </ul>
+            <p class="pcenter">Todas são viáveis, pois atendem ao critério de suporte mínimo da premissa estabelecido anteriormente (1/7).</p>
+            <p class="pcenter"><span class="passos">Passo 3:</span> gere as regras e calcule as métricas:</p>
+            <p class="pcenter">Regras:</p>
+            <ul>
+                <li><p class="pcenter">R1 = “Se Acesso é TV, então Acesso é Tablet”</p></li>
+                <li><p class="pcenter">R2 = “Se Acesso é TV, então Acesso é Smartphone”</p></li>
+                <li><p class="pcenter">R3 = “Se Acesso é Tablet, então Acesso é TV”</p></li>
+                <li><p class="pcenter">R4 = “Se Acesso é Tablet, então Acesso é Smartphone”</p></li>
+                <li><p class="pcenter">R5 = “Se Acesso é Smartphone, então Acesso é TV”</p></li>
+                <li><p class="pcenter">R6 = “Se Acesso é Smartphone, então Acesso é Tablet”</p></li>
+            </ul>
+            <p class="pcenter">Confiança:</p>
+            <ul>
+                <li><p class="pcenter">Conf(R1) = 3/3</p></li>
+                <li><p class="pcenter">Conf(R2) = 0/3</p></li>
+                <li><p class="pcenter">Conf(R3) = 3/5</p></li>
+                <li><p class="pcenter">Conf(R4) = 2/5</p></li>
+                <li><p class="pcenter">Conf(R5) = 0/4</p></li>
+                <li><p class="pcenter">Conf(R6) = 2/4</p></li>
+            </ul>
+            <p class="pcenter">Podemos eliminar as regras R2 e R5, pois não atendem ao critério de confiança mínima da regra estabelecido anteriormente (2/7).</p>
+            <p class="pcenter"><span class="passos">Passo 4:</span> refazer os passos 2 e 3 até o critério de parada.</p>
+            <p class="pcenter">Novas premissas:</p>
+            <ul>
+                <li><p class="pcenter">Prem4 = “Se Acesso é TV e Tablet”</p></li>
+                <li><p class="pcenter">Prem5 = “Se Acesso é TV e Smartphone”</p></li>
+                <li><p class="pcenter">Prem6 = “Se Acesso é Tablet e TV”</p></li>
+                <li><p class="pcenter">Prem7 = “Se Acesso é Tablet e Smartphone”</p></li>
+                <li><p class="pcenter">Prem8 = “Se Acesso é Smartphone e TV”</p></li>
+                <li><p class="pcenter">Prem9 = “Se Acesso é Smartphone e Tablet”</p></li>
+            </ul>
+            <p class="pcenter">Suporte:</p>
+            <ul>
+                <li><p class="pcenter">Sup(Prem4) = 3/7</p></li>
+                <li><p class="pcenter">Sup(Prem5) = 0/7</p></li>
+                <li><p class="pcenter">Sup(Prem6) = 3/7</p></li>
+                <li><p class="pcenter">Sup(Prem7) = 2/7</p></li>
+                <li><p class="pcenter">Sup(Prem8) = 0/7</p></li>
+                <li><p class="pcenter">Sup(Prem9) = 2/7</p></li>
+            </ul>
+            <p class="pcenter">Podemos elminar as premissas Prem5 e Prem8, pois não atendem ao critério de suporte mínimo da premissa estabelecido anteriormente (1/7).</p>
+            <p class="pcenter">Novas regras:</p>
+            <ul>
+                <li><p class="pcenter">R7 = “Se Acesso é TV e Tablet, então Acesso é Smartphone”</p></li>
+                <li><p class="pcenter">R8 = “Se Acesso é Tablet e TV, então Acesso é Smartphone”</p></li>
+                <li><p class="pcenter">R9 = “Se Acesso é Tablet e Smartphone, então Acesso é TV”</p></li>
+                <li><p class="pcenter">R10 = “Se Acesso é Smartphone e Tablet, então Acesso é TV”</p></li>
+            </ul>
+            <p class="pcenter">Claramente, todas são inviáveis pois a intersecção entre Smartphone e TV é vazia.</p>
+            <p class="pcenter"><span>Passo 5:</span> retornar as regras geradas.</p>
+            <ul>
+                <li><p class="pcenter">R1 = “Se Acesso é TV, então Acesso é Tablet”</p></li>
+                <li><p class="pcenter">R3 = “Se Acesso é Tablet, então Acesso é TV”</p></li>
+                <li><p class="pcenter">R4 = “Se Acesso é Tablet, então Acesso é Smartphone”</p></li>
+                <li><p class="pcenter">R6 = “Se Acesso é Smartphone, então Acesso é Tablet”</p></li>
+            </ul>
+            <p class="pcenter">Assim, dado um novo cliente na loja virtual, ofereceríamos a ele também o Tablet caso ele visualizasse a TV ou o Smartphone, e ofereceríamos também a TV e o Smartphone, caso ele visualizasse o Tablet.</p>
+        </div>
+        <div class="side_r">
+        </div>
+    </div>
+
+</body>
+</html>

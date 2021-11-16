@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icones-->
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <!--ligações-->
+    <link rel="stylesheet" type="text/css" href="classificação.css">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <link rel='icon' type='image/png' href="face.png">
+    <title>Aprendizado Supervisionado</title>
+</head>
+<body>
+    <!--menu-->
+    <nav id="nav">
+        <div class="container">
+                
+            <div class="logo">Artificial Intelligence</div>
+            <label for="drop" class="toggle btn-menu">Menu</label>
+            <input type="checkbox" id="drop">
+            
+            <ul class="menu"> 
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <label for="drop-1" class="toggle">Sobre +</label>
+                    <a href="#">Sobre</a>
+                    <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="o_que_e_IA.html">O que é?</a></li>
+                        <li><a href="exemplos.html">Aplicações de IA</a></li>
+                        <li><a href="historiaAI.html">Dados Históricos</a></li>
+            
+                    </ul>
+                </li>
+                <li>
+                    <label for="drop-2" class="toggle">Machine Learning +</label>
+                    <a href="#">Machine Learning</a>
+                    <input type="checkbox" id="drop-2">
+                    <ul>
+                        <li><a href="machinelearning.html">Machine Learning</a></li>
+                        <li><a href="quem-usando.html">Quem está usando?</a></li>
+                        <li><a href="mpopulares.html">métodos mais populares</a></li>
+                        <li><a href="diferença.html">Diferença</a></li>
+                    </ul> 
+                </li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="login.html">Login</a></li>
+        </div>
+    </nav>
+
+
+    <div class="up">
+        <h1>Aprendizado Supervisionado</h1>
+    </div>
+    <div class="linha-horizontal"></div>
+
+    <div class="main">
+        <div class="side_l">
+        </div>
+        <div class="center">
+            <p class="pcenter">Dando continuidade no Aprendizado Supervisionado, temos a Classificação e a Regressão, que serão detalhados a seguir.</p>
+            <!--classificação-->
+            <p class="_bold">Classificação</p>
+            <p class="pcenter">Um exemplo típico de problema de Classificação é a detecção de clientes com perfis fraudulentos. Imagine a seguinte situação: um determinado cliente deseja obter um empréstimo de R$ 10.000,00. O gestor deste sistema poderia se perguntar: “Será que este cliente vai pagar o empréstimo?”. Ou ainda, “Qual é o melhor modelo de financiamento para este cliente (juros, prazo etc.)?”. Este é um problema típico de Classificação, pois deseja-se classificar um cliente em uma das possíveis classes do problema, por exemplo, bom pagador/mau pagador ou juros/prazo/outros.</p>
+            <p class="pcenter">A Classificação é uma das categorias de problemas de Machine Learning mais importantes e mais populares e o objetivo do algoritmo é aprender uma regra geral que mapeie as entradas nas saídas corretamente. Conforme já mencionamos, os dados de entrada podem ser divididos em dois grupos: X, com os atributos a serem utilizados na determinação da classe de saída e Y, que representa a classe de saída (o atributo para o qual se deseja fazer a predição do valor da classe), sendo que em problemas de Classificação, o Y é sempre categórico.</p>
+            <p class="pcenter">Informalmente, um problema de Classificação pode ser definido como a busca por uma função matemática que permita associar corretamente cada exemplo Xi de um conjunto de dados a um único rótulo categórico, Yi, denominado classe. Esta função, uma vez identificada, poderá ser aplicada a novos dados para prever suas respectivas classes. A figura a seguir ilustra este problema:</p>
+            <div class="imgs">
+            <img src="conjunto-dados-classes.png" alt="conjunto-dados-classes">
+            </div>
+            <p class="pcenter">O fluxo resumido de um problema de Classificação inicia gerando, a partir de uma base de dados rotulada (aquela em que para cada exemplo, conhecemos a sua respectiva classe), dois subconjuntos disjuntos: a base de treino (contendo, por exemplo, 70% dos dados originais) e a base de teste (contendo, o restante dos dados originais, no caso, 30%).</p>
+            <p class="pcenter">Em seguida, é realizado o treinamento do modelo: a base de treino é submetida ao modelo (classificador) para que seus parâmetros sejam calibrados de acordo com os dados apresentados. Após esta etapa, ocorre a etapa de predição de classes: os exemplos da base de teste são apresentados para o modelo treinado para que este realize a predição de suas classes. Medimos a qualidade do modelo comparando as classes preditas com as classes verdadeiras da base de teste, permitindo medir sua habilidade em classificar corretamente exemplos não vistos durante o treinamento. Este fluxo pode ser resumido pela figura a seguir.</p>
+            <div class="imgs">
+                <img src="problemas-classificação.png" alt="problemas-classificação">
+            </div>
+            <p class="pcenter">Existem diversas medidas para estimar o desempenho de um classificador, sendo a acurácia uma das mais utilizadas, que representa o percentual de acertos do classificador. Outra métrica bastante utilizada para problemas de classificação é a matriz de confusão, que oferece um detalhamento do desempenho do modelo de classificação, mostrando, para cada classe, o número de classificações corretas em relação ao número de classificações preditas pelo modelo. A matriz de confusão pode ser usada para calcular outras métricas, tais como o número de Falsos Positivos (quando o resultado esperado é negativo, mas o modelo resulta em positivo), Falsos Negativos (quando o resultado esperado é positivo, mas o modelo resulta em negativo), Verdadeiros Positivos (quando o resultado esperado é positivo e o modelo resulta em positivo) e Verdadeiros Negativos (quando o resultado esperado é negativo e o modelo resulta em negativo).</p>
+            <p class="pcenter">A figura a seguir ilustra a matriz de confusão para um problema de classificação binária, no qual há somente duas classes possíveis, C1 e C2. Para problemas de classificação múltipla (no qual há mais de duas classes possíveis), a matriz de confusão pode ser um pouco confusa de se interpretar, sendo desencorajado o seu uso como única métrica de avaliação neste caso.</p>
+            <div class="imgs">
+                <img src="problemas-classificação-binária.png" alt="problemas-classificação-binária">
+            </div>
+        </div>
+        <div class="side_r">
+        </div>
+    </div>
+    <div class="regressão">
+        <h2>
+            Regressão
+        </h2>
+        <a href="regressão.html"><button class="btn-regressão">Saiba mais</button></a>
+    </div>
+
+
+</body>
+</html>

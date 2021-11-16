@@ -1,0 +1,343 @@
+*{
+    margin: 0 auto;
+}
+/*scrollbar*/
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(236, 232, 232);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background-color: rgb(99, 98, 98);
+}
+/*menu*/
+body{
+    font-family: Arial;
+    background-color: white;
+}
+
+.container{
+    width:100%;
+    max-width:1040px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle,
+[id^=drop]{
+    display: none;
+}
+nav{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: rgb(99, 98, 98);
+    z-index: 100;
+}
+.logo{
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+}
+nav::after{
+
+}
+nav ul{
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    float: left;
+    background-color: rgb(99, 98, 98);
+    display: inline-block;
+}
+nav a{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav ul li ul li:hover{
+    background-color: black;
+}
+nav a:hover{
+    background-color: black;
+}
+nav ul ul{
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+nav ul li:hover > ul{
+    display: inherit;
+}
+nav ul ul li{
+    display: list-item;
+    width: 170px;
+    float: none;
+    position: relative;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+li > a:after{
+    content: "+";
+}
+li > a:only-child::after{
+    content: "";
+}
+/*responsividade celular*/
+@media all and (max-width:700px){
+    .container{
+        display: block;
+    }
+    .logo{
+        float: left;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        height: 60px;
+    }
+    .btn-menu{
+        float: right;
+        cursor: pointer;
+        height: 60px;
+        padding: 0 15px!important;
+        display: flex!important;
+        align-items: center;
+    }
+    nav{
+        margin: 0;
+    }
+    .toggle + a,
+    .menu{
+        display: none;
+    }
+    .toggle{
+        display: flex;
+        align-items: center;
+        background-color: rgb(99, 98, 98);
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        border: 0;
+        padding: 0 15px;
+        height: 60px;
+    }
+    .toggle:hover{
+        background-color:black;
+    }
+    [id^=drop]:checked + ul{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav a:hover,
+    nav ul ul ul a{
+        background-color: black;
+    }
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a{
+        color: white;
+    }
+    nav ul ul{
+        float: none;
+        position: static;
+        color: white;
+    }
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+    nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul ul ul li{
+        position: static;
+    }
+}
+
+
+
+/* 
+-----------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------
+*/
+/* para a barra de menu se fixar em cima*/
+nav{
+    position: fixed;
+    top: 0;
+}
+
+
+.up{
+    width: 60%;
+    height: 135px;
+    margin-top: 180px;
+    text-align: center;
+}
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    max-width: 600px;
+}
+.linha-horizontal {
+    width: 500px;
+    border: 1px solid rgb(243, 151, 14);
+    margin-top: 30px;
+}
+
+.main{
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+.side_l{
+    flex: 25%;
+
+}
+.side_r{
+    flex: 25%;
+
+}
+.center{
+ flex: 50%;
+ border: solid black 1px;
+ padding: 30px;
+ border-radius: 20px;
+}
+
+.pcenter{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    font-weight: 900;
+    padding-top: 30px;
+}
+._bold{
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(243, 151, 14);
+    margin-top: 20px;
+}
+.imgs{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    margin-top: 10px;
+}
+.Algoritmos_de_Machine_Learning{
+    width: 20%;
+    text-align: center;
+    border: solid 1px black;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+button.btn-algoritmo-ml{
+    font-family: serif;
+    font-size: 1.094vw;/*21px*/
+    font-weight: 300;
+    border:none;
+    cursor: pointer;
+    border-radius:1.302vw; /*25px*/
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+button.btn-algoritmo-ml{
+    background-color: rgb(243, 151, 14);
+    color: white;
+    box-shadow: 0px 0.260vw 0 rgb(168, 86, 8);
+}
+button.btn-algoritmo-ml:hover{
+    background-color: rgb(168, 86, 8);
+}
+button.btn-algoritmo-ml:active{
+    box-shadow: none;
+    position: relative;
+    top: 0.260vw;   /*5px*/
+
+}
+/*resposibilidade 430px*/
+@media only screen and (max-width:430px){
+    
+    .up{
+        width: 85%;
+        margin-top: 100px;
+        text-align: center;
+
+    }
+    h1{
+        font-size: 30px;
+        max-width: 200px;
+    }
+
+    .linha-horizontal {
+        width: 200px;
+        border: 1px solid rgb(243, 151, 14);
+        margin-top: 30px;
+    }    
+
+    .pcenter{
+        font-size: 15px;
+    }
+    .main{
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .side_l{
+        flex: 0%;
+    
+    }
+    .side_r{
+        flex: 0%;
+    
+    }
+    .center{
+     flex: 100%;
+     border: solid black 1px;
+     padding: 30px;
+     border-radius: 20px;
+    }
+    .imgs{
+        width: 100%;
+
+    }
+    img{
+        max-width: 300px;
+    }
+    .Algoritmos_de_Machine_Learning{
+        width: 60%;
+    }
+    button.btn-algoritmo-ml{
+        font-size: 21px;
+    }
+}
+/*resposibilidade 430px*/
+@media only screen and (max-width:330px){
+    img{
+        max-width: 250px;
+    }
+}

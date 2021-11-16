@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icones-->
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <!--ligações-->
+    <link rel="stylesheet" type="text/css" href="regressão.css">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <link rel='icon' type='image/png' href="face.png">
+    <title>Regressão</title>
+</head>
+<body>
+    <!--menu-->
+    <nav id="nav">
+        <div class="container">
+                
+            <div class="logo">Artificial Intelligence</div>
+            <label for="drop" class="toggle btn-menu">Menu</label>
+            <input type="checkbox" id="drop">
+            
+            <ul class="menu"> 
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <label for="drop-1" class="toggle">Sobre +</label>
+                    <a href="#">Sobre</a>
+                    <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="o_que_e_IA.html">O que é?</a></li>
+                        <li><a href="exemplos.html">Aplicações de IA</a></li>
+                        <li><a href="historiaAI.html">Dados Históricos</a></li>
+            
+                    </ul>
+                </li>
+                <li>
+                    <label for="drop-2" class="toggle">Machine Learning +</label>
+                    <a href="#">Machine Learning</a>
+                    <input type="checkbox" id="drop-2">
+                    <ul>
+                        <li><a href="machinelearning.html">Machine Learning</a></li>
+                        <li><a href="quem-usando.html">Quem está usando?</a></li>
+                        <li><a href="mpopulares.html">métodos mais populares</a></li>
+                        <li><a href="diferença.html">Diferença</a></li>
+                    </ul> 
+                </li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="login.html">Login</a></li>
+        </div>
+    </nav>
+
+    <div class="up">
+        <h1>Aprendizado Supervisionado</h1>
+    </div>
+    <div class="linha-horizontal"></div>
+
+    <div class="main">
+        <div class="side_l">
+        </div>
+        <div class="center">
+            <!--regressão-->
+            <p class="_bold">Regressão</p>
+            <p class="pcenter">O problema de Classificação, apresentado anteriormente, pode ser considerado um subtipo do problema de Regressão, pois ambos são bem similares. Sua principal diferença consiste na saída do modelo: na Classificação, o resultado é categórico e na Regressão, o resultado é numérico (contínuo ou discreto). Um exemplo de problema de Regressão é a predição do valor estimado das vendas em uma nova filial de uma determinada cadeia de lojas. Se esta pergunta for mapeada em um problema de Classificação, as respostas possíveis poderiam ser: Alto/Médio/Baixo. Se mapeada em um problema de Regressão, as respostas poderiam ser valores monetários. As tarefas de separação em conjuntos de treino e teste, treinamento e teste são feitas de forma equivalente para ambos os problemas.</p>
+            <p class="pcenter">Assim como na Classificação, a Regressão consiste em realizar aprendizado supervisionado a partir de dados históricos. Além do tipo do resultado de saída do modelo, os dois problemas também se diferem quanto às métricas utilizadas para a avaliação de saída: na Regressão, verifica-se a distância ou o erro entre a saída do modelo e a saída desejada. A saída do modelo é um valor numérico que deve ser o mais próximo possível do valor desejado, e a diferença entre esses valores fornece uma medida de erro de estimação do algoritmo.</p>
+            <p class="pcenter">Podemos definir um problema de Regressão como: dado um conjunto de n padrões, cada um deles composto por variáveis explicativas (independentes) e por uma variável resposta contínua ou discreta (dependente), busca-se construir um modelo de Regressão que estime o valor mais esperado para a variável resposta dado um novo padrão i. Assim, seja di o valor de resposta desejada para o padrão i e seja zi a resposta predita do algoritmo, obtida a partir da entrada do padrão i, então di — zi é o erro observado para o objeto i. O processo de treinamento do modelo de regressão tem por objetivo “corrigir” este erro observado e, para tal, busca ajustar os parâmetros do modelo de forma a aproximar as saídas preditas dos valores de saída desejados.</p>
+            <p class="pcenter">Dentre as diversas métricas de avaliação utilizadas para problemas de regressão, uma das mais usadas é a RMSE (Root Mean Square Error, ou raiz do erro quadrático médio). Quanto menor o valor de RMSE, melhor é o modelo de regressão analisado. Outra métrica muito utilizada é o Coeficiente de Determinação, ou R2. Quanto mais próximo de 1, melhor é o ajuste do modelo.</p>
+            <p class="pcenter">Para cada um dos problemas de Machine Learning existem diversos algoritmos que podem ser utilizados. Entretanto, vale a pena mencionar o conhecido teorema “não existe almoço grátis”: não existe um algoritmo de aprendizado que seja superior a todos os demais quando considerados todos os problemas possíveis. A cada problema, os algoritmos disponíveis devem ser experimentados a fim de identificar aqueles que obtêm melhor desempenho. Em seguida, apresentaremos alguns dos modelos mais utilizados para aprendizagem supervisionada.</p>
+        </div>
+        <div class="side_r">
+        </div>
+    </div>
+
+    <div class="Algoritmos_de_Machine_Learning">
+        <h2>
+            Algoritmos de Machine Learning
+        </h2>
+        <a href="algoritmo-ml.html"><button class="btn-algoritmo-ml">Saiba mais</button></a>
+    </div>
+
+
+</body>
+</html>

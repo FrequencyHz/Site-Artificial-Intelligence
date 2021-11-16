@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icones-->
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <!--ligações-->
+    <link rel="stylesheet" type="text/css" href="clusterização.css">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <link rel='icon' type='image/png' href="face.png">
+    <title>Aprendizado Não-Supervisionado</title>
+</head>
+<body>
+    <!--menu-->
+    <nav id="nav">
+        <div class="container">
+                
+            <div class="logo">Artificial Intelligence</div>
+            <label for="drop" class="toggle btn-menu">Menu</label>
+            <input type="checkbox" id="drop">
+            
+            <ul class="menu"> 
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <label for="drop-1" class="toggle">Sobre +</label>
+                    <a href="#">Sobre</a>
+                    <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="o_que_e_IA.html">O que é?</a></li>
+                        <li><a href="exemplos.html">Aplicações de IA</a></li>
+                        <li><a href="historiaAI.html">Dados Históricos</a></li>
+            
+                    </ul>
+                </li>
+                <li>
+                    <label for="drop-2" class="toggle">Machine Learning +</label>
+                    <a href="#">Machine Learning</a>
+                    <input type="checkbox" id="drop-2">
+                    <ul>
+                        <li><a href="machinelearning.html">Machine Learning</a></li>
+                        <li><a href="quem-usando.html">Quem está usando?</a></li>
+                        <li><a href="mpopulares.html">métodos mais populares</a></li>
+                        <li><a href="diferença.html">Diferença</a></li>
+                    </ul> 
+                </li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="login.html">Login</a></li>
+        </div>
+    </nav>
+
+
+    <div class="up">
+        <h1>Aprendizado Não-Supervisionado</h1>
+    </div>
+    <div class="linha-horizontal"></div>
+
+    <div class="main">
+        <div class="side_l">
+        </div>
+        <div class="center">
+            <!--clusterização-->
+            <p class="_bold">Clusterização</p>
+            <p class="pcenter">O problema de Clusterização (ou Agrupamento) tem o objetivo de agrupar os dados de interesse, ou separar os registros de um conjunto de dados em subconjuntos ou grupos (clusters), de tal forma que elementos em um cluster compartilhem um conjunto de propriedades comuns que os diferencie dos elementos de outros clusters. São os problemas de aprendizagem não-supervisionada mais comuns. Um exemplo deste problema seria imaginar que quiséssemos determinar localidades promissoras para abertura de novas filiais de uma loja. Neste caso, os bairros de uma cidade poderiam ser agrupados em localidades mais ou menos promissoras.</p>
+            <p class="pcenter">Neste tipo de problema, os grupos são formados de acordo com alguma medida de similaridade, de forma que elementos pertencentes a um dado grupo devem ser mais similares entre si, ou seja, compartilham um conjunto maior de propriedades comuns, do que em relação aos pertencentes a outros grupos. Sendo assim, é necessário definir o que significa que duas observações são similares ou diferentes dentro do domínio do nosso problema. Esta informação geralmente é obtida por meio da consulta a especialistas do negócio, que auxiliam na interpretação dos resultados, mas também existem métricas que medem o resultado do agrupamento, tais como o coeficiente de silhouette. Alguns algoritmos de clusterização requerem que o usuário forneça o número de clusters a formar, enquanto outros buscam detectar a quantidade de clusters naturais existentes no conjunto de dados de entrada.</p>
+            <p class="pcenter">Os algoritmos de clusterização podem ser divididos em duas categorias: partitivos ou hierárquicos. Os algoritmos partitivos dividem o conjunto de dados em k clusters e produzem agrupamentos simples, tentando fazer os clusters tão compactos e separados quanto possível. Eles funcionam bem quando os clusters são compactos, densos e bastante separados uns dos outros. Entretanto, quando existem grandes diferenças nos tamanhos e geometrias dos diferentes clusters, podem dividir desnecessariamente grandes clusters para minimizar a distância total calculada.</p>
+            <p class="pcenter">O funcionamento dos algoritmos partitivos pode ser resumido como:</p>
+            <ul>
+                <li><p class="pcenter"></p>Inicialmente, k objetos são escolhidos aleatoriamente como os centros dos k clusters.</li>
+                <li><p class="pcenter"></p>Os objetos são divididos entre os k clusters de acordo com a medida de similaridade adotada, de modo que cada objeto fique no cluster que forneça o menor valor de distância entre o objeto e o centro do cluster.</li>
+                <li><p class="pcenter"></p>Uma estratégia iterativa determina se os objetos devem mudar de cluster, fazendo com que cada cluster contenha somente os elementos mais similares entre si.</li>
+                <li><p class="pcenter"></p>Após a divisão inicial, há duas possibilidades na escolha do “elemento” que vai representar o centro do cluster, e que será a referência para o cálculo da medida de similaridade:</li>
+                <li><p class="pcenter"></p>Média dos objetos que pertencem ao cluster (centróide ou centro de gravidade do cluster).</li>
+                <li><p class="pcenter"></p>O objeto que se encontra mais próximo ao centro de gravidade daquele cluster (medoide).</li>
+            </ul>
+            <p class="pcenter">Já os algoritmos hierárquicos criam uma decomposição hierárquica do conjunto de dados, representada por um dendrograma, uma árvore que iterativamente divide o conjunto de dados em subconjuntos menores até que cada subconjunto consista em somente um objeto. Cada nó da árvore representa um cluster do conjunto de dados e a união dos clusters em um determinado nível da árvore corresponde ao cluster no nível exatamente acima. A figura a seguir ilustra um dendrograma:</p>
+            <div class="imgs">
+                <img src="dendrograma.png" alt="dendrograma">
+            </div>
+            <p class="pcenter">Os algoritmos hierárquicos podem seguir a abordagem aglomerativa (bottom-up), que começa considerando cada um dos elementos do conjunto de entrada um cluster (uma folha da árvore) e vai agrupando-os segundo um critério de distância até que se chegue à raiz da árvore; ou divisiva (top-down), na qual se parte da raiz para as folhas, considerando inicialmente todos os elementos do conjunto de entrada pertencentes a um único cluster (raiz) e realizando sucessivas divisões em clusters até que se obtenha n clusters ou alguma condição de parada seja satisfeita.</p>
+        </div>
+        <div class="side_r">
+        </div>
+    </div>
+    <div class="associação">
+        <h2>
+            Associação
+        </h2>
+        <a href="associação.html"><button class="btn-associação">Saiba mais</button></a>
+    </div>
+
+
+
+
+</body>
+</html>

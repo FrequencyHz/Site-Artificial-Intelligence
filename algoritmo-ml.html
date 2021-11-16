@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--icones-->
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <!--ligações-->
+    <link rel="stylesheet" type="text/css" href="algoritmo-ml.css">
+    <!--fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    
+    <link rel='icon' type='image/png' href="face.png">
+    <title> Algoritmos de Machine Learning</title>
+</head>
+<body>
+    <!--menu-->
+    <nav id="nav">
+        <div class="container">
+                
+            <div class="logo">Artificial Intelligence</div>
+            <label for="drop" class="toggle btn-menu">Menu</label>
+            <input type="checkbox" id="drop">
+            
+            <ul class="menu"> 
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <label for="drop-1" class="toggle">Sobre +</label>
+                    <a href="#">Sobre</a>
+                    <input type="checkbox" id="drop-1">
+                    <ul>
+                        <li><a href="o_que_e_IA.html">O que é?</a></li>
+                        <li><a href="exemplos.html">Aplicações de IA</a></li>
+                        <li><a href="historiaAI.html">Dados Históricos</a></li>
+            
+                    </ul>
+                </li>
+                <li>
+                    <label for="drop-2" class="toggle">Machine Learning +</label>
+                    <a href="#">Machine Learning</a>
+                    <input type="checkbox" id="drop-2">
+                    <ul>
+                        <li><a href="machinelearning.html">Machine Learning</a></li>
+                        <li><a href="quem-usando.html">Quem está usando?</a></li>
+                        <li><a href="mpopulares.html">métodos mais populares</a></li>
+                        <li><a href="diferença.html">Diferença</a></li>
+                    </ul> 
+                </li>
+                <li><a href="noticias.html">Notícias</a></li>
+                <li><a href="login.html">Login</a></li>
+        </div>
+    </nav>
+
+
+    <div class="up">
+        <h1>Aprendizado Supervisionado</h1>
+    </div>
+    <div class="linha-horizontal"></div>
+
+    <div class="main">
+        <div class="side_l">
+        </div>
+        <div class="center">
+            <!--regressão-->
+            <p class="_bold">Algoritmos de Machine Learning</p>
+            <p class="subtitle">Árvore de Decisão</p>
+            <p class="pcenter">A Árvore de Decisão é inspirada na forma como humanos tomam decisão e, por este motivo, um dos modelos mais simples de se entender. Uma das principais vantagens deste algoritmo é a apresentação visual da informação, facilitando o entendimento pelo ser humano. As árvores podem ser usadas para problemas de Classificação (Árvores de Classificação) ou Regressão (Árvores de Regressão). De forma resumida, uma árvore de decisão usa amostras das características dos dados para criar regras de decisão no formato de árvore, mapeando os dados em um conjunto de regras que podem ser usadas para uma decisão.</p>
+            <p class="pcenter">As árvores de decisão costumam ter bons resultados e boa interpretabilidade, e podem realizar automaticamente a seleção de variáveis para compor suas estruturas. Cada nó interno representa uma decisão sobre uma característica, que determina como os dados serão particionados pelos seus nós filhos. Para aplicar o modelo a um novo exemplo, basta testar os valores dos atributos em cada nó da árvore e percorrê-la até se atingir um nó folha, que representará a classe ou o valor predito, dependendo do problema ser de Classificação ou de Regressão. A figura a seguir ilustra uma Árvore de Classificação.</p>
+            <div class="imgs">
+                <img src="arvore-classificação.png" alt="árvore-classificação">
+            </div>
+            <p class="pcenter">Existem diferentes algoritmos para a elaboração de uma Árvore de Decisão. Alguns exemplos são: ID3, C4.5, C5.0 e CART. A ideia geral de todos estes algoritmos é bem parecida: a construção da árvore é realizada, em geral, de acordo com alguma abordagem recursiva de particionamento do conjunto de dados. A principal distinção entre os algoritmos está nos processos de seleção de variáveis, critério de particionamento e critério de parada para o crescimento da árvore.</p>
+            <p class="subtitle">K-Vizinhos mais próximos (KNN)</p>
+            <p class="pcenter">O algoritmo KNN (k-Nearest Neighbours ou k-Vizinhos Mais Próximos) é um algoritmo de simples entendimento e que funciona muito bem na prática, podendo ser utilizado tanto para problemas de Classificação quanto para problemas de Regressão. Sua ideia principal é considerar que os exemplos vizinhos são similares ao exemplo cuja informação se deseja inferir, uma ideia parecida com “Diga-me com quem andas e eu te direi quem tu és!”. O KNN considera que os registros do conjunto de dados correspondem a pontos no espaço Rn, em que cada atributo corresponde a uma dimensão deste espaço. A figura a seguir ilustra um exemplo no espaço R2.</p>
+            <div class="imgs">
+                <img src="exemplo-knn.png" alt="exemplo-knn">
+            </div>
+            <p class="pcenter">No KNN, o conjunto de dados de treinamento é armazenado e, quando um novo exemplo chega, ele é comparado a todos os exemplos armazenados para identificar os k (que é um parâmetro de entrada do algoritmo) vizinhos mais próximos (mais semelhantes) de acordo com alguma métrica de distância (por exemplo, distância euclidiana). No caso de ser um problema de classificação, a classe do novo registro é determinada por inspeção das classes dos k vizinhos mais próximos, de acordo com a métrica escolhida. No caso de um problema de regressão, em vez da classe, examina-se o valor de Y dos k vizinhos. Na maioria das implementações do KNN, os atributos são normalizados no início do algoritmo, para que contribuam igualmente na predição da classe ou do valor.</p>
+            <p class="pcenter">As etapas a seguir resumem o algoritmo KNN:</p>
+            <ul>
+                <li style="list-style-type: disc"><p class="pcenter">Definição da métrica de distância utilizada e valor de k.</p></li>
+                <li style="list-style-type: disc"><p class="pcenter">Cálculo da distância do novo exemplo a cada um dos exemplos existentes no conjunto inicial de entrada.</p></li>
+                <li style="list-style-type: disc"><p class="pcenter">Identificação dos k exemplos do conjunto de referência que apresentaram menor distância em relação ao novo exemplo (mais similares).</p></li>
+                <li style="list-style-type: disc"><p class="pcenter">Apuração da classe mais frequente entre os k exemplos identificados no passo anterior, usando votação majoritária (para problemas de classificação) ou estimação do valor Y como a média aritmética dos k-vizinhos mais próximos.</p></li>
+            </ul>
+            <p class="subtitle">Regressão Linear</p>
+            <p class="pcenter">A Regressão Linear é um algoritmo utilizado apenas para problemas de Regressão, e, resumidamente, consiste em escolher coeficientes para construir uma reta que minimize a soma dos quadrados dos erros (SQE) entre os valores reais dos exemplos de treinamento e esta reta. Observe um exemplo de regressão linear para o problema de se estimar o faturamento esperado para uma filial em um bairro, considerando a renda per capita deste bairro, ilustrado na figura a seguir:</p>
+            <div class="imgs">
+                <img src="exemplo-regressão-linear.png" alt="exemplo-regressão-linear">
+            </div>
+            <p class="pcenter">Neste caso, os coeficientes da reta de regressão linear são -24,49 e 0,15, e este modelo significa que, a cada aumento de R$100 na renda per capita do bairro, espera-se que isso reflita em 0,15 ∗ 100 = 15 mil de faturamento para a filial. Esta solução é dita ótima porque ela representa a reta que passa mais perto dos pontos (considerando a distância euclidiana), como ilustra a figura a seguir:</p>
+            <div class="imgs">
+                <img src="exemplo-cálculo-erro.png" alt="exemplo de cálculo de erro na regressão linear">
+            </div>
+            <p class="pcenter">Assim, para cada escolha dos parâmetros β0 e β1 na equação (que especificam, respectivamente, o intercepto do eixo y e a inclinação da reta):</p>
+            <div class="imgs">
+                <img src="exemplo-rendapercapita.png" alt="exemplo-rendapercapita">
+            </div>
+            <p class="pcenter">podemos calcular os erros (ou desvios) dessa escolha. Porém, observe que se somarmos todos os erros individuais para calcular o erro total do modelo eles irão se anular, uma vez que os erros individuais são positivos e negativos. Desta forma, é mais indicado trabalhar com a magnitude do erro, como, por exemplo, o erro ao quadrado.</p>
+            <p class="pcenter">É importante ressaltar que neste exemplo consideramos apenas a relação entre faturamento e renda per capita, mas, em problemas reais, dificilmente haverá uma única variável x capaz de prever a saída y. Assim, se quiséssemos adicionar uma ou mais variáveis x ao problema, teríamos uma Regressão Linear Múltipla, acrescentando mais coeficientes à equação, um para cada variável de X, e estendendo a equação da reta para a equação de um plano ( quando temos 3 dimensões) ou hiperplano (quanto temos mais de 3 dimensões).</p>
+            <p class="pcenter">Formalmente, a Regressão Linear modela a relação entre a variável de resposta y e as variáveis preditoras X, e corresponde ao problema de estimar uma função a partir de pares entrada-saída, considerando que y pode ser explicado por uma combinação linear de X. Assim, a solução de um problema de regressão consiste em encontrar valores para os coeficientes de regressão de forma que a reta (ou plano/hiperplano) se ajuste aos valores assumidos pelas variáveis no conjunto de dados.</p>
+            <p class="pcenter">A saída do modelo é um valor numérico contínuo que deve ser o mais próximo possível do valor desejado, e a diferença entre esses valores fornece uma medida de erro do algoritmo. Se a equação de regressão aproxima suficientemente bem os dados de treinamento, então ela pode ser usada com novos dados (nos quais não conhecemos o valor de y) para estimar y a partir do valor das variáveis X, assumindo uma relação linear entre estas variáveis. Em suma, a Regressão Linear procura pelos coeficientes da reta que minimizam a distância dos objetos à reta.</p>
+            <p class="subtitle">Regressão Logística</p>
+            <p class="pcenter">A Regressão Logística, apesar do nome, é um algoritmo utilizado exclusivamente para problemas de Classificação, mas seu funcionamento lembra muito o funcionamento do algoritmo de Regressão Linear. A Regressão Logística é usada para estimar valores discretos de classes binárias (valores como 0/1, sim/não, verdadeiro/falso) com base em um conjunto de variáveis independentes. Internamente, a Regressão Logística calcula a probabilidade de ocorrência de um evento, ajustando os dados a uma função logit, uma função que mapeia a saída em valores entre 0 e 1.</p>
+            <p class="pcenter">De forma similar à Regressão Linear, a Regressão Logística usa uma equação como representação: os valores de entrada X são combinados linearmente usando coeficientes para prever um valor de saída y. A diferença é que o valor de saída é modelado em valor de classe binário em vez de um valor numérico.</p>
+            <p class="pcenter">A Regressão Logística modela a probabilidade da classe padrão do problema. Por exemplo, se estivermos modelando o perfil de um cliente (bom ou mau pagador) dado seu salário, podemos escolher considerar a classe “bom pagador” como padrão, e iremos modelar a probabilidade de uma entrada X pertencer à classe padrão. Os melhores coeficientes resultarão em um modelo que vai prever um valor muito próximo de 1 para a classe padrão e um valor muito próximo de 0 para a outra classe. Após determinados os coeficientes e construir a equação resultante, basta utilizá-la para fazer predições para novos exemplos.</p>
+            <p class="subtitle">Naïve Bayes</p>
+            <p class="pcenter">O Naïve Bayes (Bayes Ingênuo), é um dos métodos mais utilizados para Classificação por ser computacionalmente rápido e por necessitar de poucos dados de treinamento. Por este motivo, é um modelo especialmente adequado quando o problema tem um grande número de atributos (características). Basicamente, este modelo determina a probabilidade de um exemplo pertencer a uma determinada classe.</p>
+            <p class="pcenter">O Naïve Bayes é chamado de ingênuo (naïve) porque desconsidera completamente qualquer correlação existente entre os atributos do dataset. Por exemplo, em um problema de classificação de animais, se determinado animal é considerado um “Gato” se tiver bigodes, rabo e aproximadamente 30 cm de altura, o algoritmo não vai levar em consideração a correlação entre esses fatores e tratará cada um deles de forma independente.</p>
+            <p class="pcenter">Além disso, este modelo foi assim batizado por ser baseado no Teorema de Bayes, estando relacionado com o cálculo de probabilidades condicionais. O Teorema de Bayes determina a probabilidade de um evento com base em um conhecimento prévio (a priori) que pode estar relacionado a este evento.</p>
+            <p class="pcenter">Formalmente, seja X(A1, A2, …, An, C) um conjunto de dados. Considere que c1, c2, …, cn são as classes do problema (valores possíveis do atributo alvo C) e que R é um novo exemplo que deve ser classificado. Sejam ainda a1, a2, …, ak os valores que R assume para os atributos previsores A1, A2, …, An, respectivamente. Resumidamente, o algoritmo consiste em dois passos:</p>
+            <ul>
+                <li style="list-style-type: disc"><p class="pcenter">Calcular as probabilidades condicionais P(C=ci|R), i = 1, 2, …, k</li>
+                <li style="list-style-type: disc"><p class="pcenter">Indicar como saída do algoritmo a classe c tal que P(C=c|R) seja máxima, quando considerados todos os valores possíveis do atributo alvo C.</li>
+            </ul>
+            <p class="pcenter">A intuição por trás do algoritmo é dar mais peso para as classes mais frequentes, considerando que os atributos são estatisticamente independentes entre si. Apesar de isto não ocorrer em muitos casos práticos, o método mostra-se bastante efetivo mesmo nos casos em que os atributos não sejam estatisticamente independentes.</p>
+            <p class="subtitle">Support Vector Machines (SVM)</p>
+            <p class="pcenter">O algoritmo Support Vector Machine (SVM, ou Máquina de Vetores de Suporte), é um dos algoritmos mais populares efetivos para problemas de classificação (apesar de também poder ser usado para problemas de regressão). Apesar de o treinamento do SVM geralmente ser lento, esses modelos exigem poucos ajustes e tendem a apresentar boa acurácia, conseguindo modelar fronteiras de decisão complexas e não lineares.</p>
+            <p class="pcenter">Resumidamente, o SVM realiza um mapeamento não linear (utilizando funções kernel) para transformar os dados de treino originais em uma dimensão maior, buscando nesta nova dimensão um hiperplano que separe os dados linearmente de forma ótima. Com um mapeamento apropriado para uma dimensão suficientemente alta, dados de duas classes poderão ser sempre separados por um hiperplano. O SVM encontra este hiperplano usando vetores de suporte (exemplos essenciais para o treinamento) e margens, definidas pelos vetores de suporte.</p>
+            <p class="pcenter">A figura a seguir ilustra um classificador linear (ilustrado pela reta sólida) e duas retas paralelas a este classificador, pontilhadas. Cada uma das retas pontilhadas é movida a partir da posição da reta sólida, e determina quando a reta paralela intercepta o primeiro ponto do conjunto de dados, que é denominado vetor de suporte. A margem é a distância construída entre estas duas retas paralelas pontilhadas.</p>
+            <div class="imgs">
+                <img src="Exemplo de classificador linear, margem e vetores de suporte.png" alt="Exemplo de classificador linear, margem e vetores de suporte">
+            </div>
+            <p class="pcenter">Como na maioria das vezes infinitas retas (ou hiperplanos) dividem corretamente o conjunto de treinamento em duas classes, o SVM deve, então, realizar um processo de escolha da reta separadora dentre o conjunto infinito de retas possíveis. Assim como existem infinitas retas que separam os pontos em duas classes, há diversos tamanhos de margem possíveis dependendo da reta escolhida como classificador. A figura a seguir ilustra dos possíveis classificadores para um mesmo problema, com dois tamanhos de margem diferentes.</p>
+            <div class="imgs">
+                <img src="Diferentes tamanhos de margem possíveis para um mesmo problema.png" alt="Diferentes tamanhos de margem possíveis para um mesmo problema">
+            </div>
+            <p class="pcenter">O classificador associado ao valor máximo de margem é denominado classificador linear de margem máxima, e geralmente é o classificador do SVM que apresenta o melhor resultado e então, é ele que procuramos. Os vetores de suporte são os pontos mais difíceis de classificar e, por construção, todos os vetores de suporte possuem a mesma distância em relação a reta do classificador linear (a metade do comprimento da margem).</p>
+            <p class="pcenter">Assim, o SVM realiza um processo de otimização, por meio do qual são determinados os parâmetros (coeficientes) do classificador linear que produzam o valor máximo para o comprimento da margem. A reta correspondente a este classificador linear é dita ótima porque, se ela for deslocada em alguma das duas direções das retas perpendiculares a ela, a probabilidade é menor de haver um erro de classificação. Assim, a posição do classificador linear correspondente ao comprimento de margem máximo é a mais segura possível com relação a eventuais erros de classificação, e quanto maior a distância de x para o hiperplano, maior a confiança sobre a classe a que x pertence. Uma vez obtidos os valores dos coeficientes e encontrado o classificador linear de margem máxima, aplica-se uma função de decisão para classificar um novo exemplo, cuja classe, é dada pelo sinal do resultado desta função.</p>
+            <p class="pcenter">Na prática, o SVM é implementado usando funções kernel, objetos matemáticos que permitem que trabalhemos um espaço de dimensão maior. Os tipos de kernel mais utilizados são linear, polinomial e radial. Para um conjunto de dados que não é linearmente separável, o SVM utiliza funções kernel para mapear o conjunto de dados para um espaço de dimensão maior que a original, e o classificador é ajustado neste novo espaço. Assim, o SVM é, na verdade, a combinação do classificador linear com um kernel não linear. O processo de mapeamento de um espaço em outro de dimensão maior é ilustrado pela figura a seguir:</p>
+            <div class="imgs">
+                <img src="Exemplo de mapeamento de um conjunto não linearmente separável em um linearmente separável.png" alt="Exemplo de mapeamento de um conjunto não linearmente separável em um linearmente separável">
+            </div>
+            <p class="pcenter"></p>
+            <p class="pcenter"></p>
+            <p class="pcenter"></p>
+            <p class="pcenter"></p>
+            <p class="pcenter"></p>
+        </div>
+        <div class="side_r">
+        </div>
+    </div>
+
+</body>
+</html>
