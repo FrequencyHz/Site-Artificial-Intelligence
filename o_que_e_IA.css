@@ -180,7 +180,28 @@ nav{
     top: 0;
 
 }
-
+.box-english{
+    width: 9%;
+    margin-top: 100px;
+    margin-left: 85%;
+    border: 1px solid black;
+    
+}
+.english{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.english:hover{
+    text-decoration: underline;
+    color: white;
+}
+.box-english:hover{
+    background-color: rgb(99, 98, 98);
+}
 /*main*/
 .up{
     width: 60%;
@@ -291,6 +312,10 @@ li{
     .main{
         width: 100%;
         margin-top: 50px;
+    }
+    .box-english{
+    width: 50%;
+    margin-left: 25%;
     }
 }
 
