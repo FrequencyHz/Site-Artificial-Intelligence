@@ -224,7 +224,7 @@ div.intro{
 }
 h3.h3_intro{
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 14px;
+    font-size: 25px;
     color: black;
     padding-left: 0.521vw; /*10px*/
     padding-right:0.260vw;   /*5px*/
@@ -234,6 +234,8 @@ h3.h3_intro{
     .intro{
         width: 90%;
     }
+    .h3_intro{
+        font-size: 14px;
 }
 
 /*-------------meio-------------*/
