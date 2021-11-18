@@ -234,7 +234,7 @@ h3.h3_intro{
 /*-------------meio-------------*/
 div.meio{
     width:60%;
-    height:525px; /*500px*/
+    min-height:525px; /*500px*/
     background-color: white;
     display: flex;
     margin-top: 30px;
@@ -306,7 +306,7 @@ button.btn_meio:active{
 @media only screen and (max-width:700px){
     div.meio{
         flex-direction: column;
-        height:1600px;
+        min-height:1600px;
         width:90%;
         text-align: center;
     }
