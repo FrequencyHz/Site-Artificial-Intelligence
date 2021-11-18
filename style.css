@@ -189,7 +189,7 @@ nav{
 /*imgs*/
 div.img_topo{
     width:99%;
-    height: 10.417vw;
+    min-height: 200px;/*10.417vw*/
     text-align: center;
     margin-top: 70px;
     background-image: url("topo1.jpg");
@@ -200,35 +200,40 @@ div.img_topo{
 h1.topo{
     font-family: Arial;
     color: white;
-    font-size: 1.563vw;
-    padding-top: 2.604vw;
+    font-size: 30px;/*1.563vw*/
+    padding-top: 50px;/*2.604vw*/
 }
 h2.topo{
     font-family: Arial;
     color: whitesmoke;
-    font-size: 1.042vw;
-    padding-top: 1.042vw;
+    font-size: 20px;/*1.042vw*/
+    padding-top: 20px;/*1.042vw*/
     font-weight: 600;
 
 }
 /*intro*/
 div.intro{
     width: 60%;
-    height: 20.833vw;
+    min-height: 200px;
     background-color: rgb(255, 255, 255);
     box-shadow: 0px 1px 60px rgb(184, 184, 184);
     border-radius: 30px;
     text-align: center;
-    margin-top: 2.525vw; /*50px*/
-    padding: 1vw;
+    margin-top: 50px; /*2.525vw*/
+    padding: 19.2px;/*1vw*/
 }
 h3.h3_intro{
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 1.198vw;
+    font-size: 14px;
     color: black;
     padding-left: 0.521vw; /*10px*/
     padding-right:0.260vw;   /*5px*/
     padding-top: 5.208vw; /*100px*/
+}
+@media only screen and (max-width:700px){
+    .intro{
+        width: 90%;
+    }
 }
 
 /*-------------meio-------------*/
