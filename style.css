@@ -372,10 +372,10 @@ button.btn_meio:active{
   }
 .icons{
     display: inline-block;
-    width: 3.535vw;/*70px*/
-    height: 3.535vw; /*70px*/
+    width: 70px;/*3.535vw*/
+    height: 70px; /*3.535vw*/
     background-color: #f1f1f1;
-    margin: 0.505vw; /*10px*/
+    margin: 10px; /*0.505vw*/
     border-radius: 50%;
     box-shadow: 0 5px 15px -5px #00000070;
     color: rgb(243, 151, 14);
@@ -385,15 +385,15 @@ button.btn_meio:active{
 }
 .copyright{
     color:  #a7a7a7;
-    font-size: 1.198vw; /*23px*/   
+    font-size:23px ; /*1.198vw*/   
 }
 .dev{
     color:  #a7a7a7;
-    font-size: 1.198vw; /*23px*/ 
+    font-size: 23px; /*1.198vw*/ 
 }
 .icons i{
-    line-height: 3.535vw; /*70px*/
-    font-size: 1.313vw; /*26px*/
+    line-height: 70px; /*3.535vw*/
+    font-size: 26px; /*1.313vw*/
     transition: 0.2s linear;
 
 }
@@ -441,7 +441,7 @@ button.btn_meio:active{
 /*footer2*/
 .afooter2{
     text-decoration: none;
-    font-size: 0.781vw; /*15px*/
+    font-size: 15px; /*0.781vw*/
 }
 .afooter2:hover{
     text-decoration: underline;
@@ -449,7 +449,7 @@ button.btn_meio:active{
 }
 h4{
     color:  #a7a7a7;
-    font-size: 1.198vw; /*23px*/ 
+    font-size: 23px; /*1.198vw*/ 
     padding-left: 145px;
     padding-top: 20px;
     padding-bottom: 10px;
@@ -465,6 +465,32 @@ h4{
     border-bottom: 1px solid rgb(243, 151, 14);
 }
 
+@media only screen and (max-width:700px){
+    .footer{
+        display: inline-block;
+    }
+    h4{
+        padding-left: 0;
+    }
+    .footer2{
+        text-align: center;
+    }
+    .pfooter2{
+        padding: 10px;
+
+    }
+    .icons{
+        width: 50px;
+        height: 50px;
+    }
+    .copyright{
+        margin-top: 10px;
+    }
+    .dev{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
 /*effect write machine*/
 span {
     border-right: .05em solid;
