@@ -226,9 +226,9 @@ h3.h3_intro{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 25px;
     color: black;
-    padding-left: 0.521vw; /*10px*/
-    padding-right:0.260vw;   /*5px*/
-    padding-top: 5.208vw; /*100px*/
+    padding-left: 10px; /*0.521vw*/
+    padding-right:5px;   /*0.260vw*/
+    padding-top: 100px; /*5.208vw*/
 }
 @media only screen and (max-width:700px){
     .intro{
