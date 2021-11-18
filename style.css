@@ -471,6 +471,7 @@ h4{
     }
     h4{
         padding-left: 0;
+        font-size: 15px;
     }
     .footer2{
         text-align: center;
@@ -485,10 +486,14 @@ h4{
     }
     .copyright{
         margin-top: 10px;
+        max-width: 200px;
+        font-size: 15px;
     }
     .dev{
         margin-top: 10px;
         margin-bottom: 10px;
+        max-width: 200px;
+        font-size: 15px;
     }
 }
 /*effect write machine*/
