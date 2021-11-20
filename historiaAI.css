@@ -182,6 +182,29 @@ nav{
 
 }
 
+
+.box-english{
+    width: 9%;
+    margin-top: 100px;
+    margin-left: 85%;
+    border: 1px solid black;
+    
+}
+.english{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.english:hover{
+    text-decoration: underline;
+    color: white;
+}
+.box-english:hover{
+    background-color: rgb(99, 98, 98);
+}
 .main{
     width: 85%;
     position: relative;
@@ -230,6 +253,10 @@ h1{
         border: 1px solid rgb(243, 151, 14);
         margin-top: 30px;
     }    
+    .box-english{
+    width: 50%;
+    margin-left: 25%;
+    }
 }
 
 /*timeline*/
