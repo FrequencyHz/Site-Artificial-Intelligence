@@ -1,0 +1,348 @@
+*{
+    margin: 0 auto;
+    padding: 0 auto;
+    box-sizing: border-box;
+}
+
+/*scrollbar*/
+::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgb(236, 232, 232);
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 8px;
+    background-color: rgb(99, 98, 98);
+}
+
+body{
+
+    font-family: Arial;
+    background-color: white;
+}
+/*menu*/
+.container{
+    width:100%;
+    max-width:1040px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.toggle,
+[id^=drop]{
+    display: none;
+}
+nav{
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    top: 0;
+    left: 0;
+    background-color: rgb(99, 98, 98);
+    z-index: 100;
+}
+.logo{
+    font-size: 20px;
+    color: white;
+    font-weight: 900;
+}
+nav::after{
+
+}
+nav ul{
+    list-style: none;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+nav ul li{
+    float: left;
+    background-color: rgb(99, 98, 98);
+    display: inline-block;
+}
+nav a{
+    display: flex;
+    align-items: center;
+    height: 60px;
+    padding: 0 15px;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+nav ul li ul li:hover{
+    background-color: black;
+}
+nav a:hover{
+    background-color: black;
+}
+nav ul ul{
+    display: none;
+    position: absolute;
+    top: 60px;
+}
+nav ul li:hover > ul{
+    display: inherit;
+}
+nav ul ul li{
+    display: list-item;
+    width: 170px;
+    float: none;
+    position: relative;
+}
+nav ul ul ul li{
+    position: relative;
+    top: -60px;
+    left: 170px;
+}
+li > a:after{
+    content: "+";
+}
+li > a:only-child::after{
+    content: "";
+}
+/*responsividade celular*/
+@media all and (max-width:700px){
+    .container{
+        display: block;
+    }
+    .logo{
+        float: left;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        height: 60px;
+    }
+    .btn-menu{
+        float: right;
+        cursor: pointer;
+        height: 60px;
+        padding: 0 15px!important;
+        display: flex!important;
+        align-items: center;
+    }
+    nav{
+        margin: 0;
+    }
+    .toggle + a,
+    .menu{
+        display: none;
+    }
+    .toggle{
+        display: flex;
+        align-items: center;
+        background-color: rgb(99, 98, 98);
+        color: white;
+        font-size: 14px;
+        text-decoration: none;
+        border: 0;
+        padding: 0 15px;
+        height: 60px;
+    }
+    .toggle:hover{
+        background-color:black;
+    }
+    [id^=drop]:checked + ul{
+        display: block;
+    }
+    nav ul li{
+        display: block;
+        width: 100%;
+    }
+    nav a:hover,
+    nav ul ul ul a{
+        background-color: black;
+    }
+    nav ul li ul li .toggle,
+    nav ul ul a,
+    nav ul ul ul a{
+        color: white;
+    }
+    nav ul ul{
+        float: none;
+        position: static;
+        color: white;
+    }
+    nav ul ul li:hover > ul,
+    nav ul li:hover > ul {
+        display: none;
+    }
+    nav ul ul li{
+        display: block;
+        width: 100%;
+    }
+    nav ul ul ul li{
+        position: static;
+    }
+}
+/*menu fixar em cima*/
+nav{
+    position: fixed;
+    top: 0;
+
+}
+
+.main{
+    width: 85%;
+    position: relative;
+    margin-top: 50px;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    max-width: 1200px;
+    
+}
+
+.up{
+    width: 60%;
+    height: 135px;
+    margin-top: 180px;
+    text-align: center;
+}
+h1{
+    font-family: 'Playfair Display', serif;
+    font-size: 45px;
+    max-width: 700px;
+}
+.linha-horizontal {
+    width: 500px;
+    border: 1px solid rgb(243, 151, 14);
+    margin-top: 30px;
+}
+.box-english{
+    width: 9%;
+    margin-top: 100px;
+    margin-left: 85%;
+    border: 1px solid black;
+    
+}
+.english{
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 20px;
+    font-family: 'Playfair Display', serif;
+}
+.english:hover{
+    text-decoration: underline;
+    color: white;
+}
+.box-english:hover{
+    background-color: rgb(99, 98, 98);
+}
+/*resposibilidade 430px*/
+@media only screen and (max-width:430px){
+    
+    .up{
+        width: 85%;
+        margin-top: 100px;
+        text-align: center;
+
+    }
+    h1{
+        font-size: 30px;
+        max-width: 300px;
+    }
+
+    .linha-horizontal {
+        width: 200px;
+        border: 1px solid rgb(243, 151, 14);
+        margin-top: 30px;
+    }    
+    .box-english{
+        width: 50%;
+        margin-left: 25%;
+    }
+}
+
+/*timeline*/
+.container-time{
+    min-width: 100px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+    padding: 100px 0;
+}
+.timeline{
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+}
+.timeline ul{
+    list-style: none;
+}
+.timeline ul li{
+    padding: 20px;
+    background-color: whitesmoke;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.timeline ul li:last-child{
+    margin-bottom:0;
+}
+.timeline-content h1{
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.timeline-content p{
+    font-size:16px;
+    line-height:30px;
+    font-weight: 300;
+}
+@media only screen and (min-width: 768px){
+    .timeline::before{
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: gray;
+    }
+    .timeline ul li{
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .timeline ul li:nth-child(odd){
+        float:left;
+        clear: right;
+        transform: translateX(-30px);
+    }
+    .timeline ul li:nth-child(even){
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+    }
+    .timeline ul li::after{
+        content:'';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background-color: gray;
+        border-radius: 50%;
+        top: 0;
+    }
+    .timeline ul li:nth-child(odd)::after{
+        transform: translate(50%, -50%);
+        right: -3%;
+        transition: linear 0.3s;
+    }
+    .timeline ul li:nth-child(even)::after{
+        transform: translate(-50%, -50%);
+        left: -13%;
+        transition:linear 0.3s;
+    }
+    .timeline ul li:hover:after{
+        background-color: rgb(243, 151, 14);
+    }
+
+}
